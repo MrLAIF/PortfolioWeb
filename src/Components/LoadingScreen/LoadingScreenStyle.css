@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    color: white;
+    background-color: black;
+}
+
+.containerrr{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    animation: del 0s forwards 3s;
+    z-index: 1000;
+}
+
+.growing-cut{
+    position: fixed;
+    width: 100%;
+    border: 2px solid black;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation: grow 0.5s ease-in-out 0.5s;
+}
+
+@keyframes grow {
+    from{
+        width: 0px;
+    }
+    to{
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+.two-walls{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    animation: del 0s forwards 3s;
+
+}
+
+.top-wall{
+    height: 50vh;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+
+    animation: dissa 0.8s ease forwards 1s;
+}
+
+.bottom-wall{
+    height: 50vh;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    
+    animation: dissa 0.8s ease forwards 1s;
+}
+
+@keyframes dissa {
+    from{
+        height: 50vh;
+    }
+    to{
+        height: 0;
+    }
+}
+
+@keyframes del {
+    from{
+        display: flex;
+    }
+
+    to{
+        display: none;
+    }
+}
